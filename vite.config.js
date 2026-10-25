@@ -11,6 +11,12 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: () => '/v1/latest-prices.json',
       },
+      '/api/lohidata': {
+        target: 'https://data.ssb.no',
+        changeOrigin: true,
+        rewrite: (path) =>
+          path.replace(/^\/api\/lohidata/, '/api/pxwebapi/v2/tables/03024/data'),
+      },
     },
   },
 })
