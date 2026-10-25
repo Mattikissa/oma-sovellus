@@ -23,17 +23,25 @@ function App() {
         color: 'white',
       }}
     >
-      <h1>PETTERIN TYÖ</h1>
-      <p>Laskuri: {count}</p>
-      <button type="button" onClick={() => setCount((currentCount) => currentCount + 1)}>
-        Kasvata laskuria
-      </button>
-      <button
-        type="button"
-        onClick={() => setCount((currentCount) => Math.max(0, currentCount - 1))}
+      <section
+        style={{
+          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+          padding: '24px 32px',
+          borderRadius: '6px',
+        }}
       >
-        Vähennä laskuria
-      </button>
+        <h1>PETTERIN TYÖ</h1>
+        <p>Laskuri: {count}</p>
+        <button type="button" onClick={() => setCount((currentCount) => currentCount + 1)}>
+          Kasvata laskuria
+        </button>
+        <button
+          type="button"
+          onClick={() => setCount((currentCount) => Math.max(0, currentCount - 1))}
+        >
+          Vähennä laskuria
+        </button>
+      </section>
     </main>
   )
 }
