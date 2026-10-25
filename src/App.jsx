@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import heroImg from './assets/Untitled.png'
 import './App.css'
 
 function App() {
@@ -12,7 +13,16 @@ function App() {
   }, [count])
 
   return (
-    <main id="center">
+    <main
+      id="center"
+      style={{
+        minHeight: '100vh',
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(${heroImg})`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        color: 'white',
+      }}
+    >
       <h1>PETTERIN TYÖ</h1>
       <p>Laskuri: {count}</p>
       <button type="button" onClick={() => setCount((currentCount) => currentCount + 1)}>
