@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import heroImg from './assets/Untitled.png'
+import Sahkonhinta from './Sahkonhinta'
 import './App.css'
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
         >
           Vähennä laskuria
         </button>
+        <Sahkonhinta />
       </section>
     </main>
   )
